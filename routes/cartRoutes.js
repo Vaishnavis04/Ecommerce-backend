@@ -4,7 +4,7 @@ const router=express.Router();
 const auth=require('../middlewares/auth');
 
 router.post("/",auth,CartController.createCart)
-router.get("/",auth,CartController.getcart)
+router.get("/getcart",auth,CartController.getcart)
 router.delete("/delete/:id",auth,CartController.deleteCart)
 
 

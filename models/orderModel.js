@@ -5,6 +5,11 @@ const orderSchema = new mongoose.Schema({
         require:true,
 
     },
+    id:{
+        type:String,
+        require:true,
+    },
+    
     user_email:{
         type:String,
         required:true
