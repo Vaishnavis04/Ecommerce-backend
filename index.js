@@ -4,7 +4,7 @@ const userRoutes=require("./routes/userRoutes")
 const cartRoutes=require("./routes/cartRoutes")
 const orderRoutes=require("./routes/orderRoutes")
 const app=express();
-// const cors=require("cors");
+const cors=require('cors');
 const mongoose=require('mongoose');
 
 app.use(express.json());
@@ -13,7 +13,7 @@ mongoose.connect(
 ).then(()=>{
     console.log("Connected to database");
 })
-// app.use(cors());
+app.use(cors());
 app.use("/products",productRoutes);
 app.use("/user",userRoutes);
 app.use("/cart",cartRoutes);
