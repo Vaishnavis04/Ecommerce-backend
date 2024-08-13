@@ -4,9 +4,9 @@ const userRoutes=require("./routes/userRoutes")
 const cartRoutes=require("./routes/cartRoutes")
 const orderRoutes=require("./routes/orderRoutes")
 const app=express();
-
-const mongoose=require('mongoose');
 // const cors=require("cors");
+const mongoose=require('mongoose');
+
 app.use(express.json());
 mongoose.connect(
    "mongodb+srv://vaishnavis2022eee:8GQE5U4L7sfLu6DY@cluster0.xe6mxsp.mongodb.net/Ecommerce"
