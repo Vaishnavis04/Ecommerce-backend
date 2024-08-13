@@ -6,14 +6,14 @@ const orderRoutes=require("./routes/orderRoutes")
 const app=express();
 
 const mongoose=require('mongoose');
-const cors=require('cors');
+// const cors=require("cors");
 app.use(express.json());
 mongoose.connect(
    "mongodb+srv://vaishnavis2022eee:8GQE5U4L7sfLu6DY@cluster0.xe6mxsp.mongodb.net/Ecommerce"
 ).then(()=>{
     console.log("Connected to database");
 })
-app.use(cors());
+// app.use(cors());
 app.use("/products",productRoutes);
 app.use("/user",userRoutes);
 app.use("/cart",cartRoutes);
